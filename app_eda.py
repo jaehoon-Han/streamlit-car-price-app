@@ -56,7 +56,7 @@ def run_eda() :
             word = st.text_input('이름을 검색할 단어를 입력하세요.')
 
             # 2. 검색어를 고객이름 컬럼에 들어있는 데이터 가져온다
-            result = car_df.loc[ car_df['Customer Name'].str.contains(word)]
+            result = df.loc[ df['Customer Name'].str.contains(word)]
 
             # 3. 화면에 보여준다.
             st.dataframe(result)
